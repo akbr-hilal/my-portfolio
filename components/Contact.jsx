@@ -1,17 +1,32 @@
 import { Icon } from '@iconify/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
 
 import ContactImg from '../public/assets/contacts.jpg'
 
 const Contact = () => {
 
+  const [alert, setAlert] = useState(null)
+
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    emailjs.sendForm('service_sc6r5u2', 'template_o9g1rs2', e.target, 'Fl0j89OvkSoifM_Fc').then(res => console.log(res)).catch(err => console.log(err))
+    emailjs.sendForm('service_sc6r5u2', 'template_o9g1rs2', e.target, 'Fl0j89OvkSoifM_Fc')
+    .then(res => {
+      console.log(res)
+      const alert = (
+        <div className="bg-green-100 rounded-lg py-5 px-6 mb-3 text-base text-green-700 inline-flex items-center w-full" role="alert">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" className="w-4 h-4 mr-2 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+          </svg>
+          Send Message Success
+        </div>
+      )
+      setAlert(alert)
+    })
+    .catch(err => console.log(err))
   }
   return (
     <div id='contact' className='w-full lg:h-screen'>
@@ -71,6 +86,7 @@ const Contact = () => {
           {/* Right */}
           <div className='col-span-3 w-full h-auto shadow-md shadow-gray-400 rounded-xl lg:p-4'>
             <div className='p-4'>
+            {alert}
               <form onSubmit={handleSubmit}>
                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                   <div className="flex flex-col">
