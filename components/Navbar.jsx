@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react';
 import { useRouter } from 'next/router';
 
+import Logo from '../public/assets/brand/Logo.png'
+
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const [shadow, setShadow] = useState(false)
@@ -43,7 +45,7 @@ const Navbar = () => {
     <div style={{ backgroundColor: `${navBg}` }} className={shadow ? "fixed w-full h-20 shadow-xl z-[100] bg-[#ecf0f3]" : "fixed w-full h-20 z-[100]"}>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Link href="/">
-          <Image src="/../public/assets/brand/Logo.png" alt="Logo Hilal Akbar" width="80" height="60" className='cursor-pointer'/>
+          <Image src={Logo} alt="Logo Hilal Akbar" width="80" height="60" className='cursor-pointer'/>
         </Link>
         <div>
           <ul className='hidden md:flex' style={{ color: `${linkColor}` }}>
@@ -76,7 +78,7 @@ const Navbar = () => {
         <div className={nav ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'}>
           <div>
             <div className='flex w-full items-center justify-between'>
-              <Image src="/../public/assets/brand/Logo.png" alt="Logo Hilal Akbar" width="70" height="50" />
+              <Image src={Logo} alt="Logo Hilal Akbar" width="70" height="50" />
               <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer' onClick={handleNav}>
                 <Icon icon="akar-icons:cross" />
               </div>

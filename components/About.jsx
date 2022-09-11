@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
+import AboutImg from '../public/assets/profile/about.jpg'
+
 const About = () => {
   return (
     <div id='about' className="w-full md:h-screen p-2 flex items-center justify-center py-16">
@@ -18,7 +20,7 @@ const About = () => {
           </Link>
         </div>
         <div className='flex items-center justify-center p-4'>
-          <Image src="/../public/assets/profile/about.jpg" alt="My Photos" height={300} width={400} className='rounded-xl' />
+          <Image src={AboutImg} alt="My Photos" height={300} width={400} className='rounded-xl' />
         </div>
       </div>
     </div>
