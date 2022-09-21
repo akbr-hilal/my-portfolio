@@ -64,9 +64,6 @@ const Navbar = () => {
             <Link href="/#contact">
               <li className='ml-10 text-sm uppercase horver:border-b py-2'>Contact</li>
             </Link>
-            <a href="https://drive.google.com/file/d/1LocTYhL7DKiPMJN7LplAEByFr2t25nEB/view?usp=sharing" target="_blank" rel="noreferrer">
-              <li className='ml-10 text-sm uppercase horver:border-b'> <button className='px-4 py-2'> download my cv </button></li>
-            </a>
           </ul>
           <div className='md:hidden cursor-pointer' onClick={handleNav}>
             <Icon icon="bx:menu-alt-right" width="32"/>
