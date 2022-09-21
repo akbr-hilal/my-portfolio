@@ -36,7 +36,7 @@ const cinema = () => {
           Cinema Online is a website or platform that provides services to watch the latest movies with a paid system. The creation of the Cinema Online web intends to make it easier for users who want to watch the latest movies, but intheir place of residence there is no place to watch movies like cinemas
           </p>
           <a
-            href='https://github.com/fireclint/property-finder'
+            href='https://github.com/akbr-hilal/ReactJs-Cinema_Online'
             target='_blank'
             rel='noreferrer'
           >
