@@ -29,8 +29,8 @@ const Contact = () => {
     .catch(err => console.log(err))
   }
   return (
-    <div id='contact' className='w-full lg:h-screen'>
-      <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
+    <div id='contact' className='w-full lg:h-screen p-2 pt-[6rem]'>
+      <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
         <p className='uppercase text-[#071695] text-xl tracking-widest'>contact</p>
         <h2 className='py-4'>Get In Touch</h2>
         <div className="grid lg:grid-cols-5 gap-8">
@@ -116,15 +116,6 @@ const Contact = () => {
               </form>
             </div>
           </div>
-        </div>
-        <div className='flex justify-center py-12'>
-          <Link href="/">
-            <a>
-              <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
-                <Icon icon="fluent:chevron-double-up-16-filled" color="#5651e5" width="30" />
-              </div>
-            </a>
-          </Link>
         </div>
       </div>
     </div>
